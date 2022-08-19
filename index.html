@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Arianna Front End Developer</title>
+    <link rel="icon" type="image/x-icon" href="fav-logo/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggler" id="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu" id="hamb-menu">
+          <div>
+            <div>
+              <ul>
+                <li><a onclick="closeMenu()" class="hamburger-menu-li" href="#home" >Home</a></li>
+                <li><a onclick="closeMenu()" class="hamburger-menu-li" href="#skill-portfolio" >Skill e Protfolio</a></li>
+                <li><a onclick="closeMenu()" class="hamburger-menu-li" href="#chi-sono">Chi Sono</a></li>
+                <li><a onclick="closeMenu()" class="hamburger-menu-li" href="#contatti">Contatti</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <nav id="nav">
+          <ul id="menu">
+            <li class="menu-list-item"><a href="#home" class="menu-list">Home</a></li>
+            <li class="menu-list-item"><a href="#skill-portfolio" class="menu-list">Skill e Portfolio</a></li>
+            <li class="menu-list-item"><a href="#chi-sono" class="menu-list">Chi Sono</a></li>
+            <li class="menu-list-item"><a href="#contatti" class="menu-list">Contatti</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="home-container" id="home">
+      <div id="testo-home-container">
+        <h1>Benvenuti nel mio sito!</h1>
+        <p id="p-home"> Sono <span>Arianna Solipaca</span> 
+          e sono una Front End Developer. Sono originaria di Roma e vivo a Firenze. 
+          Sono laureata in Lingue e Civiltà Orientali, ho studiato giapponese e inglese. 
+          Nonostante la formazione prettamente umanistica, ho una grande passione per il mondo digitale
+          che ho deciso di seguire iniziando il percorso formativo di front end development 
+          offerto dalla piattaforma Start2Impact (qui il link al mio profilo
+          <a href="https://talent.start2impact.it/profile/arianna-solipaca" target="_blank" rel="noopener">
+            <img id=razzo src="icone/razzo.png" alt="start2impact">
+          </a>
+          ). 
+        </p>
+      </div>
+      <div id="foto-container">
+        <img class="foto" src="foto/foto.jpg" alt="foto-personale">
+      </div>
+    </section>
+    <section class="container" id="skill-portfolio">
+      <h2 id="skill-h2">Le mie skill:</h2>
+      <div>
+        <img id="icone-skill" src="icone/html.png" alt="html" loading="lazy"> 
+        <img id="icone-skill"  src="icone/css.png" alt="css" loading="lazy">
+        <img id="icone-skill" src="icone/js.png" alt="javascript" loading="lazy">
+        <img id="icone-skill"  src="icone/bootstrap.png" alt="bootstrap" loading="lazy">
+        <img id="icone-skill"  src="icone/sass.png" alt="sass" loading="lazy">
+      </div>
+      <h2>Portfolio:</h2>
+      <p>
+        Per vedere i miei lavori visita il profilo 
+          <a href="https://github.com/AriannaSol" target="_blank" rel="noopener" class="menu-list">
+              <i class="fa-brands fa-github">
+                GitHub
+              </i>
+          </a>. 
+        </p>
+
+    </section>
+    <section class="container" id="chi-sono">
+      <h2 id="bio-h2">Qualcosa in più su di me</h2>
+      <p>
+        Sono una persona creativa, amo la fotografia, l'arte, la letteratura, la musica, il cinema.
+        Mi piace immergermi nella natura e sono guida ambientale escursionistica.
+        Adoro fare nuove esperienze, la mia curosità mi ha portata a spaziare in vari ambiti, 
+        ad aumentare le mie conosceneze e ad affronatre ostacoli sempre diversi, 
+        penso che questo possa essere un valore aggiunto al mio lavoro. 
+        Sono un'attenta ascoltatrice e ho ottime capacità di adattamento e problem solving.
+      </p> 
+      <div>
+        <img class="icone-hobby" src="icone/cinema.png" alt="cinema" loading="lazy"> 
+        <img class="icone-hobby" src="icone/musica.png" alt="musica" loading="lazy"> 
+        <img class="icone-hobby" src="icone/letteratura.png" alt="libri" loading="lazy"> 
+        <img class="icone-hobby" src="icone/viaggi.png" alt="aereo" loading="lazy"> 
+        <img class="icone-hobby" src="icone/natura.png" alt="natura" loading="lazy"> 
+        <img class="icone-hobby" src="icone/fotografia.png" alt="fotografia" loading="lazy">
+      </div>
+
+    </section>
+    <section class="container" id="contatti">
+      <h2 id="contattami">Contattami!</h2>
+      <h3 class="p-contatti">
+        Compila il form sottostante per inviare un messaggio:
+      </h3> 
+      <form class='form-contatto' name="formmail" method="POST" action="https://formspree.io/f/xnqwkrdg" onsubmit="return controlloForm()">
+       <input type="hidden" name="successo" value="http://www.miosito.com/pagina-successo.html">
+       <div id="nome-cognome">
+        <input id='nome' name='nome' type='text' placeholder="Nome"/>
+        <input id='cognome' name='cognome' type='text' placeholder="Cognome"/>
+        </div>
+        <div id="mail-telefono">
+          <input id='email' name='email' type='email' placeholder='Email'/>
+          <input id='tel' name='tel' type='tel' placeholder='Telefono'/>
+        </div>
+        <div id="messaggio">
+          <textarea id='msg' name='mesg' placeholder="Inserisci il tuo messaggio"></textarea>
+        </div>
+        <input id="invia" type="submit" value="Invia">
+      </form>
+      <h3 class="p-contatti">
+        Se preferisci scegli uno degli altri canali di contatto:
+      </h3> 
+      <ul id="canali-contatto">
+        <li id="canali" class="canali"> 
+          <a href="mailto:ariannasolipaca@gmail.com" class="contatti" target="_blank" rel="noopener">
+           <img class="icona-contatto" src="icone/icona-mail.png" alt="mail" loading="lazy">
+          </a>
+        </li>
+        <li id="canali" class="canali"> 
+          <a href="https://wa.me/393887981643" target="_blank" rel="noopener" class="contatti">
+           <img class="icona-contatto"  src="icone/icona-whatsapp.png" alt="whatsapp" loading="lazy"> 
+          </a> 
+        </li>
+        <li id="canali" class="canali"> 
+          <a href="tel:+393887981643" class="contatti" target="_blank" rel="noopener">
+           <img class="icona-contatto" src="icone/icona-telefono.png" alt="telefono" loading="lazy">
+          </a>
+        </li>
+      </ul>
+
+    </section>
+  </body>
+  <footer>
+    <div id="social-bar">
+      <a href="https://www.facebook.com/arianna.solipaca/" target="_blank" rel="noopener" id="facebook">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/ariannasolipaca/" target="_blank" rel="noopener" id="instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://github.com/AriannaSol" target="_blank" rel="noopener" id="github"> 
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+    <p id="footer-text">
+      &copy; 2022 Arianna Solipaca - ariannasolipaca@gmail.com - 3887981643
+    </p>
+  </footer>
+</html>
